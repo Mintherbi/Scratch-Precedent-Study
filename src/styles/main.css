@@ -1,0 +1,494 @@
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+header {
+    background: #35424a;
+    color: #ffffff;
+    padding: 10px 0;
+    text-align: center;
+}
+
+header h1 {
+    margin: 0;
+}
+
+nav {
+    margin: 20px 0;
+}
+
+nav a {
+    color: #ffffff;
+    text-decoration: none;
+    padding: 10px 15px;
+}
+
+nav a:hover {
+    background: #e8491d;
+}
+
+.container {
+    width: 80%;
+    margin: auto;
+    overflow: hidden;
+}
+
+.article {
+    background: #ffffff;
+    padding: 20px;
+    margin: 20px 0;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.article h2 {
+    margin-top: 0;
+}
+
+.footer {
+    text-align: center;
+    padding: 20px;
+    background: #35424a;
+    color: #ffffff;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+/* Article List Styles */
+.article-item {
+    list-style: none;
+    margin-bottom: 30px;
+}
+
+.article-preview {
+    background: #ffffff;
+    padding: 25px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.article-preview:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.15);
+}
+
+.article-preview h3 {
+    margin: 0 0 10px 0;
+    color: #35424a;
+}
+
+.article-preview h3 a {
+    color: #35424a;
+    text-decoration: none;
+}
+
+.article-preview h3 a:hover {
+    color: #e8491d;
+}
+
+.article-meta {
+    color: #666;
+    font-size: 0.9em;
+    margin-bottom: 15px;
+}
+
+.article-summary {
+    color: #555;
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
+
+/* Featured Articles Grid */
+.featured-articles-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    margin-bottom: 30px;
+}
+
+.featured-article {
+    background: #ffffff;
+    padding: 25px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.featured-article:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.15);
+}
+
+.featured-article h3 {
+    margin: 0 0 10px 0;
+    color: #35424a;
+}
+
+.featured-article h3 a {
+    color: #35424a;
+    text-decoration: none;
+}
+
+.featured-article h3 a:hover {
+    color: #e8491d;
+}
+
+/* Tags */
+.article-tags {
+    margin-top: 15px;
+}
+
+.tag {
+    display: inline-block;
+    background: #e8491d;
+    color: white;
+    padding: 4px 8px;
+    border-radius: 4px;
+    font-size: 0.8em;
+    margin-right: 8px;
+    margin-bottom: 5px;
+}
+
+/* Button Styles */
+.btn {
+    display: inline-block;
+    background: #e8491d;
+    color: white;
+    padding: 12px 24px;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background 0.3s ease;
+}
+
+.btn:hover {
+    background: #d63916;
+}
+
+.view-all {
+    text-align: center;
+    margin-top: 30px;
+}
+
+/* Article Detail Styles */
+.article-content {
+    line-height: 1.8;
+}
+
+.article-content h3 {
+    color: #35424a;
+    margin-top: 30px;
+    margin-bottom: 15px;
+}
+
+.article-content pre {
+    background: #f4f4f4;
+    padding: 15px;
+    border-radius: 5px;
+    overflow-x: auto;
+    margin: 20px 0;
+}
+
+.article-content code {
+    background: #f4f4f4;
+    padding: 2px 4px;
+    border-radius: 3px;
+    font-family: 'Courier New', monospace;
+}
+
+.article-content pre code {
+    background: none;
+    padding: 0;
+}
+
+/* Section Styles */
+.section {
+    margin: 60px 0;
+    padding: 40px 0;
+}
+
+.section:not(:last-child) {
+    border-bottom: 1px solid #eee;
+}
+
+/* Header Navigation */
+header nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin: 0;
+    padding: 0;
+}
+
+header nav ul li {
+    margin: 0;
+}
+
+header nav ul li a {
+    color: #ffffff;
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    transition: background 0.3s ease;
+}
+
+header nav ul li a:hover {
+    background: #e8491d;
+}
+
+/* About Scratch Section */
+.about-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    margin-top: 30px;
+}
+
+.about-image {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.main-image {
+    width: 100%;
+    max-width: 500px;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+}
+
+.about-text h3 {
+    color: #35424a;
+    margin-bottom: 15px;
+}
+
+.about-text ul {
+    margin: 15px 0;
+}
+
+.about-text ul li {
+    margin-bottom: 8px;
+}
+
+/* People Section */
+.people-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    margin-top: 30px;
+}
+
+.person-card {
+    background: #ffffff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.person-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+}
+
+.person-image {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 20px;
+    border: 4px solid #e8491d;
+}
+
+.person-card h3 {
+    color: #35424a;
+    margin-bottom: 10px;
+}
+
+.person-role {
+    color: #e8491d;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.person-description {
+    color: #666;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+/* Statistics Section */
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 30px;
+    margin: 30px 0;
+}
+
+.stat-card {
+    background: linear-gradient(135deg, #e8491d, #d63916);
+    color: white;
+    padding: 40px 20px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 5px 20px rgba(232, 73, 29, 0.3);
+    transition: transform 0.3s ease;
+}
+
+.stat-card:hover {
+    transform: translateY(-5px);
+}
+
+.stat-number {
+    font-size: 3em;
+    font-weight: bold;
+    margin-bottom: 10px;
+    display: block;
+}
+
+.stat-label {
+    font-size: 1.1em;
+    opacity: 0.9;
+}
+
+.stats-description {
+    text-align: center;
+    margin-top: 40px;
+}
+
+.stats-description p {
+    font-size: 1.1em;
+    color: #666;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+/* Person Profile Pages */
+.person-profile {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.profile-header {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    margin-bottom: 40px;
+    padding: 30px;
+    background: #f8f9fa;
+    border-radius: 10px;
+}
+
+.profile-image {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 5px solid #e8491d;
+}
+
+.profile-info h2 {
+    color: #35424a;
+    margin-bottom: 10px;
+}
+
+.profile-role {
+    color: #e8491d;
+    font-size: 1.2em;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.profile-affiliation {
+    color: #666;
+    font-size: 1.1em;
+}
+
+.profile-content {
+    line-height: 1.8;
+}
+
+.profile-content h3 {
+    color: #35424a;
+    margin-top: 30px;
+    margin-bottom: 15px;
+    border-bottom: 2px solid #e8491d;
+    padding-bottom: 5px;
+}
+
+.profile-content ul {
+    margin: 15px 0;
+}
+
+.profile-content ul li {
+    margin-bottom: 8px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .container {
+        width: 95%;
+        padding: 0 10px;
+    }
+    
+    .featured-articles-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    nav a {
+        display: block;
+        margin: 5px 0;
+    }
+    
+    .about-content {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+    
+    .people-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .stats-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .profile-header {
+        flex-direction: column;
+        text-align: center;
+        gap: 20px;
+    }
+    
+    .profile-image {
+        width: 150px;
+        height: 150px;
+    }
+    
+    header nav ul {
+        flex-direction: column;
+        gap: 10px;
+    }
+    
+    .section {
+        margin: 40px 0;
+        padding: 20px 0;
+    }
+}
+
+@media (max-width: 480px) {
+    .stats-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .stat-number {
+        font-size: 2.5em;
+    }
+}

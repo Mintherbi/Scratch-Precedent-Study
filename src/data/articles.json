@@ -1,0 +1,38 @@
+[
+    {
+        "id": 1,
+        "title": "Introduction to Scratch Programming",
+        "summary": "Learn the basics of Scratch programming language and how to create your first interactive project with drag-and-drop blocks.",
+        "author": "Educational Team",
+        "date": "2024-01-15",
+        "tags": ["Scratch", "Programming", "Education"],
+        "url": "introduction-scratch.html"
+    },
+    {
+        "id": 2,
+        "title": "Creative Computing with Scratch",
+        "summary": "Explore how Scratch can be used to develop computational thinking skills and create engaging multimedia projects.",
+        "author": "Dr. Sarah Johnson",
+        "date": "2024-02-10",
+        "tags": ["Scratch", "Creative Computing", "Education"],
+        "url": "creative-computing-scratch.html"
+    },
+    {
+        "id": 3,
+        "title": "Scratch in the Classroom: Best Practices",
+        "summary": "Discover effective strategies for integrating Scratch programming into K-12 curriculum and engaging students in coding.",
+        "author": "Prof. Michael Chen",
+        "date": "2024-03-05",
+        "tags": ["Scratch", "Teaching", "Curriculum"],
+        "url": "scratch-classroom-practices.html"
+    },
+    {
+        "id": 4,
+        "title": "From Blocks to Code: Transitioning from Scratch",
+        "summary": "Learn how to help students transition from visual programming in Scratch to text-based programming languages.",
+        "author": "Lisa Rodriguez",
+        "date": "2024-04-20",
+        "tags": ["Scratch", "Programming", "Transition"],
+        "url": "scratch-to-code-transition.html"
+    }
+]

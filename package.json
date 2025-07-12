@@ -1,0 +1,16 @@
+{
+  "name": "my-archive-website",
+  "version": "1.0.0",
+  "description": "A simple website to archive articles and data.",
+  "main": "src/index.html",
+  "scripts": {
+    "start": "live-server src",
+    "build": "echo 'Build step can be added here'"
+  },
+  "author": "Your Name",
+  "license": "MIT",
+  "dependencies": {},
+  "devDependencies": {
+    "live-server": "^1.2.1"
+  }
+}
