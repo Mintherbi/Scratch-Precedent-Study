@@ -371,6 +371,41 @@ header nav ul li a:hover {
     margin: 0 auto;
 }
 
+/* Analysis Section */
+.analysis-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    margin-top: 30px;
+}
+
+.analysis-card {
+    background: #ffffff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border-left: 4px solid #e8491d;
+}
+
+.analysis-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+}
+
+.analysis-card h3 {
+    color: #35424a;
+    margin-bottom: 15px;
+    font-size: 1.3em;
+}
+
+.analysis-card p {
+    color: #666;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
 /* Person Profile Pages */
 .person-profile {
     max-width: 800px;
