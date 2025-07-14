@@ -34,5 +34,55 @@
         "date": "2024-04-20",
         "tags": ["Scratch", "Programming", "Transition"],
         "url": "scratch-to-code-transition.html"
+    },
+    {
+        "id": 5,
+        "title": "[2002] Rethinking Learning in Digital Age",
+        "summary": "This foundational paper examines how digital technologies can transform learning experiences and educational paradigms. Resnick explores the potential of digital tools to support constructionist learning and creative expression.",
+        "author": "Mitchel Resnick",
+        "date": "2002-01-01",
+        "tags": ["Digital Learning", "Constructionism", "Educational Technology", "Research Paper"],
+        "url": "../papers/[2002-MR] Rethinking Learning in Digital Age.pdf",
+        "type": "paper"
+    },
+    {
+        "id": 6,
+        "title": "[2005] Extending Tangible Interfaces for Education: Digital Montessori-inspired Manipulatives",
+        "summary": "This paper explores the design and implementation of tangible interfaces for educational purposes, drawing inspiration from Montessori educational methods. The research investigates how physical manipulation can enhance digital learning experiences.",
+        "author": "Mitchel Resnick",
+        "date": "2005-01-01",
+        "tags": ["Tangible Interfaces", "Montessori", "Educational Design", "Research Paper"],
+        "url": "../papers/[2005-MR] Extending Tangible Interfaces for Education Digital Montessori inspired Manipulatives.pdf",
+        "type": "paper"
+    },
+    {
+        "id": 7,
+        "title": "[2009] Scratch: Programming for All",
+        "summary": "This seminal paper introduces Scratch as a programming language designed for everyone, particularly children and beginners. It outlines the design principles, educational goals, and community aspects that make Scratch accessible to diverse learners.",
+        "author": "Mitchel Resnick",
+        "date": "2009-01-01",
+        "tags": ["Scratch", "Programming Education", "Accessibility", "Research Paper"],
+        "url": "../papers/[2009-MR] Scratch Programming for All.pdf",
+        "type": "paper"
+    },
+    {
+        "id": 8,
+        "title": "[2010] The Scratch Programming Language",
+        "summary": "A comprehensive technical overview of the Scratch programming language, covering its design philosophy, implementation details, and educational applications. This paper serves as a definitive reference for understanding Scratch's architecture and capabilities.",
+        "author": "Mitchel Resnick",
+        "date": "2010-01-01",
+        "tags": ["Scratch", "Programming Language", "Technical Design", "Research Paper"],
+        "url": "../papers/[2010-MR] The Scratch Programming Language.pdf",
+        "type": "paper"
+    },
+    {
+        "id": 9,
+        "title": "[2012] New Frameworks for Studying and Assessing the Development of Computational Thinking",
+        "summary": "This influential paper presents new approaches to understanding and evaluating computational thinking development in educational contexts. It provides frameworks for researchers and educators to assess how students develop computational thinking skills.",
+        "author": "Mitchel Resnick",
+        "date": "2012-01-01",
+        "tags": ["Computational Thinking", "Assessment", "Educational Research", "Research Paper"],
+        "url": "../papers/[2012-MR] New frameworks for studying and assessing the development of computational thinking.pdf",
+        "type": "paper"
     }
 ]

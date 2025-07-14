@@ -33,12 +33,17 @@ function loadArticles() {
                 const listItem = document.createElement('li');
                 listItem.className = 'article-item';
                 
+                // Handle different URL patterns for articles vs papers
+                const articleUrl = article.type === 'paper' ? article.url : article.url;
+                const target = article.type === 'paper' ? 'target="_blank"' : '';
+                
                 listItem.innerHTML = `
                     <div class="article-preview">
-                        <h3><a href="${article.url}">${article.title}</a></h3>
+                        <h3><a href="${articleUrl}" ${target}>${article.title}</a></h3>
                         <p class="article-meta">
                             <span class="author">By ${article.author}</span> | 
                             <span class="date">${formatDate(article.date)}</span>
+                            ${article.type === 'paper' ? '<span class="paper-indicator">📄 Research Paper</span>' : ''}
                         </p>
                         <p class="article-summary">${article.summary}</p>
                         <div class="article-tags">
@@ -57,24 +62,29 @@ function loadArticles() {
 }
 
 function loadFeaturedArticles() {
-    fetch('./data/articles.json')
+    fetch('./src/data/articles.json')
         .then(response => response.json())
         .then(articles => {
             const featuredContainer = document.getElementById('featured-articles');
             featuredContainer.innerHTML = '';
             
-            // Show first 3 articles as featured
-            const featuredArticles = articles.slice(0, 3);
+            // Show first 6 articles as featured (mix of articles and papers)
+            const featuredArticles = articles.slice(0, 6);
             
             featuredArticles.forEach(article => {
                 const articleElement = document.createElement('div');
                 articleElement.className = 'featured-article';
                 
+                // Handle different URL patterns for articles vs papers
+                const articleUrl = article.type === 'paper' ? article.url : `src/articles/${article.url}`;
+                const target = article.type === 'paper' ? 'target="_blank"' : '';
+                
                 articleElement.innerHTML = `
-                    <h3><a href="articles/${article.url}">${article.title}</a></h3>
+                    <h3><a href="${articleUrl}" ${target}>${article.title}</a></h3>
                     <p class="article-meta">
                         <span class="author">By ${article.author}</span> | 
                         <span class="date">${formatDate(article.date)}</span>
+                        ${article.type === 'paper' ? '<span class="paper-indicator">📄 Research Paper</span>' : ''}
                     </p>
                     <p class="article-summary">${article.summary}</p>
                     <div class="article-tags">

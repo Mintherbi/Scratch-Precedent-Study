@@ -92,6 +92,12 @@ nav a:hover {
     color: #e8491d;
 }
 
+.article-preview h3 a[target="_blank"]:after {
+    content: " 🔗";
+    font-size: 0.8em;
+    opacity: 0.7;
+}
+
 .article-meta {
     color: #666;
     font-size: 0.9em;
@@ -102,6 +108,23 @@ nav a:hover {
     color: #555;
     line-height: 1.6;
     margin-bottom: 15px;
+}
+
+/* Article Meta Styles */
+.article-meta {
+    color: #666;
+    font-size: 0.9em;
+    margin-bottom: 15px;
+}
+
+.paper-indicator {
+    color: #e8491d;
+    font-weight: bold;
+    margin-left: 10px;
+    padding: 2px 6px;
+    background-color: #fff5f0;
+    border-radius: 3px;
+    font-size: 0.8em;
 }
 
 /* Featured Articles Grid */
@@ -137,6 +160,12 @@ nav a:hover {
 
 .featured-article h3 a:hover {
     color: #e8491d;
+}
+
+.featured-article h3 a[target="_blank"]:after {
+    content: " 🔗";
+    font-size: 0.8em;
+    opacity: 0.7;
 }
 
 /* Tags */
