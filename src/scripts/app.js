@@ -1,12 +1,12 @@
 document.addEventListener('DOMContentLoaded', () => {
     const articlesContainer = document.getElementById('article-items');
     
-    // Only load articles if we're on the articles page
+    // Only load papers if we're on the papers page
     if (articlesContainer) {
         loadArticles();
     }
     
-    // Load featured articles on homepage
+    // Load featured papers on homepage
     const featuredContainer = document.getElementById('featured-articles');
     if (featuredContainer) {
         loadFeaturedArticles();
@@ -25,29 +25,25 @@ document.addEventListener('DOMContentLoaded', () => {
 function loadArticles() {
     fetch('../data/articles.json')
         .then(response => response.json())
-        .then(articles => {
+        .then(papers => {
             const articlesContainer = document.getElementById('article-items');
             articlesContainer.innerHTML = '';
             
-            articles.forEach(article => {
+            papers.forEach(paper => {
                 const listItem = document.createElement('li');
                 listItem.className = 'article-item';
                 
-                // Handle different URL patterns for articles vs papers
-                const articleUrl = article.type === 'paper' ? article.url : article.url;
-                const target = article.type === 'paper' ? 'target="_blank"' : '';
-                
                 listItem.innerHTML = `
                     <div class="article-preview">
-                        <h3><a href="${articleUrl}" ${target}>${article.title}</a></h3>
+                        <h3><a href="${paper.url}" target="_blank">${paper.title}</a></h3>
                         <p class="article-meta">
-                            <span class="author">By ${article.author}</span> | 
-                            <span class="date">${formatDate(article.date)}</span>
-                            ${article.type === 'paper' ? '<span class="paper-indicator">📄 Research Paper</span>' : ''}
+                            <span class="author">By ${paper.author}</span> | 
+                            <span class="date">${formatDate(paper.date)}</span>
+                            <span class="paper-indicator">📄 Research Paper</span>
                         </p>
-                        <p class="article-summary">${article.summary}</p>
+                        <p class="article-summary">${paper.summary}</p>
                         <div class="article-tags">
-                            ${article.tags.map(tag => `<span class="tag">${tag}</span>`).join('')}
+                            ${paper.tags.map(tag => `<span class="tag">${tag}</span>`).join('')}
                         </div>
                     </div>
                 `;
@@ -56,39 +52,33 @@ function loadArticles() {
             });
         })
         .catch(error => {
-            console.error('Error loading articles:', error);
-            document.getElementById('article-items').innerHTML = '<li>Error loading articles.</li>';
+            console.error('Error loading papers:', error);
+            document.getElementById('article-items').innerHTML = '<li>Error loading papers.</li>';
         });
 }
 
 function loadFeaturedArticles() {
     fetch('./src/data/articles.json')
         .then(response => response.json())
-        .then(articles => {
+        .then(papers => {
             const featuredContainer = document.getElementById('featured-articles');
             featuredContainer.innerHTML = '';
             
-            // Show first 6 articles as featured (mix of articles and papers)
-            const featuredArticles = articles.slice(0, 6);
-            
-            featuredArticles.forEach(article => {
+            // Show all papers as featured
+            papers.forEach(paper => {
                 const articleElement = document.createElement('div');
                 articleElement.className = 'featured-article';
                 
-                // Handle different URL patterns for articles vs papers
-                const articleUrl = article.type === 'paper' ? article.url : `src/articles/${article.url}`;
-                const target = article.type === 'paper' ? 'target="_blank"' : '';
-                
                 articleElement.innerHTML = `
-                    <h3><a href="${articleUrl}" ${target}>${article.title}</a></h3>
+                    <h3><a href="${paper.url}" target="_blank">${paper.title}</a></h3>
                     <p class="article-meta">
-                        <span class="author">By ${article.author}</span> | 
-                        <span class="date">${formatDate(article.date)}</span>
-                        ${article.type === 'paper' ? '<span class="paper-indicator">📄 Research Paper</span>' : ''}
+                        <span class="author">By ${paper.author}</span> | 
+                        <span class="date">${formatDate(paper.date)}</span>
+                        <span class="paper-indicator">📄 Research Paper</span>
                     </p>
-                    <p class="article-summary">${article.summary}</p>
+                    <p class="article-summary">${paper.summary}</p>
                     <div class="article-tags">
-                        ${article.tags.map(tag => `<span class="tag">${tag}</span>`).join('')}
+                        ${paper.tags.map(tag => `<span class="tag">${tag}</span>`).join('')}
                     </div>
                 `;
                 
@@ -96,7 +86,7 @@ function loadFeaturedArticles() {
             });
         })
         .catch(error => {
-            console.error('Error loading featured articles:', error);
+            console.error('Error loading featured papers:', error);
         });
 }
 
